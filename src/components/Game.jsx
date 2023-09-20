@@ -1,22 +1,25 @@
 import Nav from "./Nav";
-import Step1 from "./Step1";
-import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement } from "../slices/counterSlice";
-import { useState } from "react";
-import React from "react";
-function Game() {
-  const steps = [0, 1, 2, 3];
-  const [currentStep, setCurrentStep] = useState(0);
+import Step from "./Step";
 
-  const StartGame = () => {
-    setCurrentStep((prev) => (prev < 4 ? prev + 1 : setCurrentStep(0)));
-    console.log(currentStep);
-  };
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { incrementStep, reset } from "../slices/stepSlice";
+
+function Game() {
+  const { step } = useSelector((state) => state.step);
+  const dispatch = useDispatch();
+  const { choice } = useSelector((state) => state.choice);
   return (
     <>
       <Nav />
+      <div className="flex flex-row justify-center scale-50 h-96 ">
+        <Step />
+      </div>
       <div className="flex flex-col">
-        <Step1 />
+        <button onClick={() => dispatch(incrementStep())}>Increment</button>
+        <button onClick={() => dispatch(reset())}>reset</button>
+        <h1 className="text-black self-center">{step}</h1>
       </div>
     </>
   );
