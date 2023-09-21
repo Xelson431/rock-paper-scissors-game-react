@@ -16,6 +16,12 @@ function Step() {
 
   const CurrentStepComponent = stepComponents[step];
 
-  return <>{CurrentStepComponent && <CurrentStepComponent />}</>;
+  return (
+    <>
+      <div className=" mt-5 ">
+        {CurrentStepComponent && <CurrentStepComponent />}
+      </div>
+    </>
+  );
 }
 export default Step;

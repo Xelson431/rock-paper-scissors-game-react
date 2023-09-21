@@ -60,7 +60,7 @@ function Step1() {
             </div>
           </div>
         </div>
-        <div className="absolute top-1 scale-125 z-10">
+        <div className="absolute top-48 scale-125 z-10">
           <img src={Triangle} />
         </div>
       </div>
