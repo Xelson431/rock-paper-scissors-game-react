@@ -2,7 +2,6 @@ import Nav from "./Nav";
 import Step from "./Step";
 import Rules from "../assets/image-rules.svg";
 import React from "react";
-
 function Game() {
   const [showModal, setShowModal] = React.useState(false);
   return (
