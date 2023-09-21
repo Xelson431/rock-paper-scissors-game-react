@@ -8,6 +8,7 @@ function Nav() {
       <div className=" grid place-items-center  ">
         <div className="flex flex-row gap-96  outline outline-slate-400 rounded-2xl p-5 max-w-7xl  m-5  ">
           <img src={logo} width={215} />
+          <div></div>
           <div className="flex-none">
             <div className="flex flex-col text-center bg-white p-6 text-2xl  text-black rounded-lg">
               <h3>SCORE</h3>

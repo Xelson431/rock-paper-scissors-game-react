@@ -53,24 +53,22 @@ function Step3() {
             <div className="imgContainer">
               <div className="Paper-Border">
                 <div className="bgwhite">
-                  <div className="placeholderCircle">
-                    {CurrentChoiceSvg && <img src={CurrentChoiceSvg} />}
-                  </div>
+                  {CurrentChoiceSvg && <img src={CurrentChoiceSvg} />}
                 </div>
               </div>
             </div>
           </div>
 
           <div className=" flex flex-col gap-14 mt-52 h-96 text-5xl   text-center">
-            <h1>
-              <b>{compareChoices(choice, ComputerChoice)}</b>
-            </h1>
             <button
-              className="btn bg-slate-50 text-black p-4 rounded-lg"
+              className="btn bg-slate-50 w-96 text-black p-4 rounded-lg"
               onClick={() => dispatch(reset())}
             >
               PLAY AGAIN
             </button>
+            <h1>
+              <b>{compareChoices(choice, ComputerChoice)}</b>
+            </h1>
           </div>
 
           <div className="flex flex-col items-center gap-32 whitespace-pre-line ">
@@ -81,9 +79,7 @@ function Step3() {
             <div className="imgContainer">
               <div className="Rock-Border">
                 <div className="bgwhite">
-                  <div className="placeholderCircle">
-                    {ComputerChoiceSvg && <img src={ComputerChoiceSvg} />}
-                  </div>
+                  {ComputerChoiceSvg && <img src={ComputerChoiceSvg} />}
                 </div>
               </div>
             </div>

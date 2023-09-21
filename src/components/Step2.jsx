@@ -28,14 +28,12 @@ function Step2() {
             <div className="imgContainer">
               <div className="Paper-Border">
                 <div className="bgwhite">
-                  <div className="placeholderCircle">
-                    {CurrentChoiceSvg && (
-                      <img
-                        src={CurrentChoiceSvg}
-                        onClick={() => dispatch(reset())}
-                      />
-                    )}
-                  </div>
+                  {CurrentChoiceSvg && (
+                    <img
+                      src={CurrentChoiceSvg}
+                      onClick={() => dispatch(reset())}
+                    />
+                  )}
                 </div>
               </div>
             </div>
@@ -43,7 +41,7 @@ function Step2() {
 
           <div className="flex self-center text-5xl">
             <button
-              className="btn bg-slate-50 text-black p-8 rounded-lg"
+              className="btn bg-slate-50 w-96 text-black p-8 rounded-lg"
               onClick={() => dispatch(incrementStep())}
             >
               PLAY
@@ -57,9 +55,7 @@ function Step2() {
             </div>
             <div className="imgContainer">
               <div className="blank-Border">
-                <div className="">
-                  <div className="placeholderCircle"></div>
-                </div>
+                <div className="placeholderCircle"></div>
               </div>
             </div>
           </div>
