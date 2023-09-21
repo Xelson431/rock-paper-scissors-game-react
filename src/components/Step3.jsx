@@ -61,7 +61,7 @@ function Step3() {
 
           <div className=" flex flex-col gap-14 mt-52 h-96 text-5xl   text-center">
             <button
-              className="btn bg-slate-50 w-96 text-black p-4 rounded-lg"
+              className="btn bg-slate-50 w-96 hover:text-red-400 text-black p-4 rounded-lg"
               onClick={() => dispatch(reset())}
             >
               PLAY AGAIN

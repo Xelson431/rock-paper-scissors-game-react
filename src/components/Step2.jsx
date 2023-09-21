@@ -41,7 +41,7 @@ function Step2() {
 
           <div className="flex self-center text-5xl">
             <button
-              className="btn bg-slate-50 w-96 text-black p-8 rounded-lg"
+              className="btn bg-slate-50 w-96 hover:text-red-400 text-black p-8 rounded-lg"
               onClick={() => dispatch(incrementStep())}
             >
               PLAY
