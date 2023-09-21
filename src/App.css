@@ -22,7 +22,7 @@
 .imgContainer img {
   position: relative !important;
   padding: 50px;
-
+  cursor: pointer;
 }
 .blank-Border{
   background-color: rgba(0, 0, 0, 0.2);
