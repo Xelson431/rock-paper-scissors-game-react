@@ -6,6 +6,8 @@ import { reset } from "../slices/stepSlice";
 import Rock from "../assets/icon-rock.webp";
 import Paper from "../assets/icon-paper.webp";
 import Scissors from "../assets/icon-scissors.webp";
+import { motion } from "framer-motion";
+
 function Step3() {
   const { choice } = useSelector((state) => state.choice);
   const dispatch = useDispatch();
@@ -66,9 +68,14 @@ function Step3() {
             >
               PLAY AGAIN
             </button>
-            <h1>
+            <motion.h1
+              key={0}
+              initial={{ opacity: 0, y: "100px" }}
+              animate={{ opacity: 1, y: "0px" }}
+              transition={{ delay: 0.2 }}
+            >
               <b>{compareChoices(choice, ComputerChoice)}</b>
-            </h1>
+            </motion.h1>
           </div>
 
           <div className="flex flex-col items-center gap-32 whitespace-pre-line ">
@@ -76,13 +83,19 @@ function Step3() {
               <span className="text-5xl ">The House</span>
               <span className="text-5xl">Picked</span>
             </div>
-            <div className="imgContainer">
+            <motion.div
+              className="imgContainer"
+              key={0}
+              initial={{ opacity: 0, rotate: 90, y: "30px" }}
+              animate={{ opacity: 1, rotate: 0, y: "0px" }}
+              transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
+            >
               <div className="Rock-Border">
                 <div className="bgwhite">
                   {ComputerChoiceSvg && <img src={ComputerChoiceSvg} />}
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

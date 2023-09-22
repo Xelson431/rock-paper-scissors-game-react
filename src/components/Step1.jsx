@@ -4,9 +4,7 @@ import Scissors from "../assets/icon-scissors.webp";
 import Triangle from "../assets/bg-triangle.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { choose } from "../slices/choiceSlice";
-import { incrementScore } from "../slices/scoreSlice";
 import { incrementStep } from "../slices/stepSlice";
-import { useEffect } from "react";
 function Step1() {
   const { choice } = useSelector((state) => state.choice);
   const dispatch = useDispatch();
