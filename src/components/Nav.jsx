@@ -8,10 +8,15 @@ function Nav() {
     <>
       <motion.div
         className=" grid place-items-center "
-        initial={{ y: "-20px" }}
-        animate={{ y: "0px" }}
+        initial={{ opacity: 0, y: "-20px" }}
+        animate={{ opacity: 100, y: "0px" }}
+        transition={{ type: "keyframes", stiffness: 100 }}
       >
-        <div className="flex flex-row gap-96 p-5  outline outline-slate-400 rounded-2xl  max-w-7xl  m-5  ">
+        <motion.div
+          className="flex flex-row gap-96 p-5  outline outline-slate-400 rounded-2xl  max-w-7xl  m-5  "
+          initial={{ opacity: 0, y: "0px" }}
+          animate={{ opacity: 100, y: "0px" }}
+        >
           <img src={logo} width={215} />
           <div></div>
           <div className="flex-none">
@@ -27,7 +32,7 @@ function Nav() {
               </motion.h1>
             </div>
           </div>
-        </div>
+        </motion.div>
       </motion.div>
     </>
   );

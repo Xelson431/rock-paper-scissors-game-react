@@ -19,7 +19,7 @@ function Step1() {
       <div className="  flex flex-col items-center self-center imgContainer  scale-125 mt-7 ">
         <div className="flex flex-row gap-40 justify-center z-50">
           <div className="Rock-Border  bg-white">
-            <div className="bgwhite">
+            <div className="bgwhite ">
               <img
                 src={Rock}
                 className=""

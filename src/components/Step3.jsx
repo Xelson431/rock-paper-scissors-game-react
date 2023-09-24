@@ -54,7 +54,7 @@ function Step3() {
             </div>
             <div className="imgContainer">
               <div className="Paper-Border">
-                <div className="bgwhite">
+                <div className="bgwhite slightRotate">
                   {CurrentChoiceSvg && <img src={CurrentChoiceSvg} />}
                 </div>
               </div>
@@ -62,12 +62,16 @@ function Step3() {
           </div>
 
           <div className=" flex flex-col gap-14 mt-52 h-96 text-5xl   text-center">
-            <button
+            <motion.button
               className="btn bg-slate-50 w-96 hover:text-red-400 text-black p-4 rounded-lg"
               onClick={() => dispatch(reset())}
+              key={0}
+              initial={{ opacity: 0, y: "-100px" }}
+              animate={{ opacity: 1, y: "0px" }}
+              transition={{ delay: 0.5 }}
             >
               PLAY AGAIN
-            </button>
+            </motion.button>
             <motion.h1
               key={0}
               initial={{ opacity: 0, y: "100px" }}
@@ -86,13 +90,15 @@ function Step3() {
             <motion.div
               className="imgContainer"
               key={0}
-              initial={{ opacity: 0, rotate: 90, y: "30px" }}
+              initial={{ opacity: 0, rotate: 90, y: "-130px" }}
               animate={{ opacity: 1, rotate: 0, y: "0px" }}
               transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
             >
               <div className="Rock-Border">
-                <div className="bgwhite">
-                  {ComputerChoiceSvg && <img src={ComputerChoiceSvg} />}
+                <div className="bgwhite invertImage ">
+                  {ComputerChoiceSvg && (
+                    <img className="" src={ComputerChoiceSvg} />
+                  )}
                 </div>
               </div>
             </motion.div>

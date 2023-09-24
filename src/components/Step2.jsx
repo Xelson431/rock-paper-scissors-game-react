@@ -27,7 +27,7 @@ function Step2() {
             </div>
             <div className="imgContainer">
               <div className="Paper-Border">
-                <div className="bgwhite">
+                <div className="bgwhite slightRotate">
                   {CurrentChoiceSvg && (
                     <img
                       src={CurrentChoiceSvg}
